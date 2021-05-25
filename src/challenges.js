@@ -29,11 +29,19 @@ function concatName(array) {
   return result
 
 }
-/* concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']) */
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let result = wins || ties
+ /*  let resultWins = 3
+  let resultTies = 1 */
+    if (result === wins) {
+      return (wins * 3) + (ties *1)
+    } else if (result === ties) {
+      return (ties * 1) + (ties *1)
+    } else {
+
+    }
 }
 
 // Desafio 6
