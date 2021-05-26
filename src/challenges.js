@@ -33,8 +33,6 @@ function concatName(array) {
 // Desafio 5
 function footballPoints(wins, ties) {
   let result = wins || ties
- /*  let resultWins = 3
-  let resultTies = 1 */
     if (result === wins) {
       return (wins * 3) + (ties *1)
     } else if (result === ties) {
@@ -45,18 +43,32 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maiorValor = array[0]
+  for (index =0; index < array.length; index += 1){
+    if (array[index] > maiorValor){
+      maiorValor = array[index];
+    }
+  } 
+  let valorIgual = 0
+  for (index2 = 0; index2 < array.length; index2 += 1){
+    if (array[index2] === maiorValor){
+      valorIgual = valorIgual + 1
+    }
+  }
+  return valorIgual
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
 
+ 
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+ // seu código aqui
 }
 
 // Desafio 9
@@ -78,4 +90,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
