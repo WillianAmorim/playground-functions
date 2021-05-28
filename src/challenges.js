@@ -78,10 +78,24 @@ let trombam = 0
 console.log(catAndMouse(2, 0, 1))
 
 // Desafio 8
-function fizzBuzz(array) {
- // seu código aqui
+function fizzBuzz(arrayNumbers) {
+ let array = []
+
+for(index = 0; index < arrayNumbers.length; index += 1){
+    if (arrayNumbers[index] % 3 === 0 && arrayNumbers[index] % 5 === 0){
+      array.push("fizzBuzz")
+    } else if (arrayNumbers[index] % 3 === 0){
+      array.push("fizz")
+    } else if (arrayNumbers[index] % 5 === 0){
+      array.push("buzz")
+    } else {
+      array.push("bug!")
+    }
+  }
+  return array
 }
 
+console.log(fizzBuzz([9, 25]))
 // Desafio 9
 function encode() {
 /*  let novaVogal = 0 
