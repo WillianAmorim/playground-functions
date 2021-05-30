@@ -58,7 +58,7 @@ function highestCount(array) {
   }
   return valorIgual
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]))
+
 
  
 // Desafio 7
@@ -74,8 +74,6 @@ let trombam = 0
     return "os gatos trombam e o rato foge"
   }
 } 
-
-console.log(catAndMouse(2, 0, 1))
 
 // Desafio 8
 function fizzBuzz(arrayNumbers) {
@@ -95,19 +93,48 @@ for(index = 0; index < arrayNumbers.length; index += 1){
   return array
 }
 
-console.log(fizzBuzz([9, 25]))
+
+
 // Desafio 9
-function encode() {
-/*  let novaVogal = 0 
-  for (index = 0; index < string.length; i += 1)
-    if (string[index] = "a"){
-      string[index] = novaVogal
-      novaVogal === "1"
-      console.log()
-    } */
+function encode(string) {
+  let senha = ""
+
+  for(let index of string){
+    if (index === "a"){
+      senha += 1
+    }else if (index === "e"){
+      senha += 2
+    }else if (index === "i"){
+      senha += 3
+    }else if (index === "o"){
+      senha += 4
+    }else if (index === "u"){
+      senha += 5
+    }else {
+      senha = senha + index
+    }
+  }
+    return senha
 }
-function decode() { 
-  // seu código aqui
+
+function decode(string1) { 
+  let senha1 = ""
+  for(let index1 of string1){
+    if (index1 === "1"){
+    senha1 += "a"
+    }else if (index1 === "2"){
+      senha1 += "e"
+    }else if (index1 === "3"){
+      senha1 += "i"
+    }else if (index1 === "4"){
+      senha1 += "o"
+    }else if (index1 === "5"){
+      senha1 += "u"
+    }else {
+      senha1 = senha1 + index1
+    }
+  }
+  return senha1 
 }
 
 module.exports = {
